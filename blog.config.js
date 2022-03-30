@@ -1,6 +1,6 @@
 // 注: process.env.XX是Vercel的环境变量，配置方式见：https://docs.tangly1024.com/zh/features/personality
 const BLOG = {
-  AUTHOR: 'aidengrong', // 作者
+  AUTHOR: '', // 作者
   BIO: '一个普通的干饭人🍚', // 作者简介
   LINK: 'ttps://blog.aidengrong.top', // 网站地址
   AVATAR: '/avatar.png', // 个人头像 默认取public目录下的avatar.png
@@ -34,15 +34,15 @@ const BLOG = {
 
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
   CONTACT_EMAIL: 'aidengrong@aidengrong.top',
-  CONTACT_QQ: 'http://wpa.qq.com/msgrd?v=3&uin=1255104520&site=qq&menu=yes',
+  CONTACT_QQ: '',
   CONTACT_TWITTER: '',
-  CONTACT_GITHUB: 'https://blog.aidengrong.top',
+  CONTACT_GITHUB: '',
   CONTACT_TELEGRAM: '',
 
   // 悬浮挂件
-  WIDGET_PET: process.env.NEXT_PUBLIC_WIDGET_PET || true, // 是否显示宠物挂件
+  WIDGET_PET: process.env.NEXT_PUBLIC_WIDGET_PET || false, // 是否显示宠物挂件
   WIDGET_PET_LINK: 'https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json', // 挂件模型地址 @see https://github.com/xiazeyu/live2d-widget-models
-  WIDGET_PET_SWITCH_THEME: true, // 点击宠物挂件切换博客主题
+  WIDGET_PET_SWITCH_THEME: false, // 点击宠物挂件切换博客主题
 
   // 评论互动 可同时开启多个支持 GISCUS CUSDIS UTTERRANCES GITALK
 
@@ -91,8 +91,8 @@ const BLOG = {
   ADSENSE_GOOGLE_ID: process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_ID || '', // 谷歌广告ID e.g ca-pub-xxxxxxxxxxxxxxxx
 
   // 无关紧要的配置
-  TITLE: process.env.NEXT_PUBLIC_TITLE || 'NotionNext BLOG', // 站点标题 ，被notion中的页面标题覆盖
-  DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || '这是一个由NotionNext生成的站点', // 站点描述，被notion中的页面描述覆盖
+  TITLE: process.env.NEXT_PUBLIC_TITLE || '番茄酱 BLOG', // 站点标题 ，被notion中的页面标题覆盖
+  DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || '这是一个由番茄酱搭建的站点', // 站点描述，被notion中的页面描述覆盖
 
   isProd: process.env.VERCEL_ENV === 'production', // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)  isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
   VERSION: '2.9.0' // 版本号
